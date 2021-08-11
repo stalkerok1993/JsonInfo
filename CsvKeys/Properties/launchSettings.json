@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CsvKeys": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\User\\Desktop\\keys.csv\" find duplicates"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JsonInfo": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\User\\Desktop\\_1.json\" \"C:\\Users\\User\\Desktop\\_2.json\" \"C:\\Users\\User\\Desktop\\_3.json\" \"C:\\Users\\User\\Desktop\\_4.json\""
+    }
+  }
+}
