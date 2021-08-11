@@ -19,7 +19,6 @@ namespace JsonCompare
 
                 List<ResultKeys> keys = Utils.ReadResultKeys(fileName);
                 Console.WriteLine($"Checking data from file {fileName}.");
-                Utils.FindDuplicates(keys);
                 allKeys.AddRange(keys);
             }
 

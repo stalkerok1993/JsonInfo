@@ -79,10 +79,27 @@ namespace JsonUtils
             var duplicatedIn1 = keys1.Where(x => keys2.Contains(x)).ToList();
             var missingIn1 = keys1.Where(x => !keys2.Contains(x)).ToList();
             Console.WriteLine($"Total values in first set: {keys1.Count}. {duplicatedIn1.Count} are the same, {keys1.Count - duplicatedIn1.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");
+            int i;
+            for (i = 0; i < Math.Min(10, missingIn1.Count); i++)
+            {
+                Console.WriteLine($"Missing key value {missingIn1[i]}.");
+            }
+            if (i + 1 < missingIn1.Count)
+            {
+                Console.WriteLine("And others...");
+            }
 
             var duplicatedIn2 = keys2.Where(x => keys1.Contains(x)).ToList();
             var missingIn2 = keys2.Where(x => !keys1.Contains(x)).ToList();
-            Console.WriteLine($"Total values in first set: {keys1.Count}. {duplicatedIn1.Count} are the same, {keys1.Count - duplicatedIn1.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");            
+            Console.WriteLine($"Total values in second set: {keys1.Count}. {duplicatedIn1.Count} are the same, {keys1.Count - duplicatedIn1.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");
+            for (i = 0; i < Math.Min(10, missingIn2.Count); i++)
+            {
+                Console.WriteLine($"Missing key value {missingIn2[i]}.");
+            }
+            if (i + 1 < missingIn2.Count)
+            {
+                Console.WriteLine("And others...");
+            }
         }
     }
 }

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JsonCompare": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\User\\Documents\\JsonFiles\\full_1.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_2.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_3.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_4.json\" _and_ \"C:\\Users\\User\\Documents\\JsonFiles\\part_11.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\part_12.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\part_21.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\part_22.json\""
+    }
+  }
+}
