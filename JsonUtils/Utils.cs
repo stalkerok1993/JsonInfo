@@ -76,9 +76,9 @@ namespace JsonUtils
 
         public static void FindMissing(List<ResultKeys> keys1, List<ResultKeys> keys2)
         {
-            var duplicatedIn1 = keys1.Where(x => keys2.Contains(x)).ToList();
-            var missingIn1 = keys1.Where(x => !keys2.Contains(x)).ToList();
-            Console.WriteLine($"Total values in first set: {keys1.Count}. {duplicatedIn1.Count} are the same, {keys1.Count - duplicatedIn1.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");
+            var duplicated = keys1.Intersect(keys2).ToList();
+            var missingIn1 = keys2.Except(keys1).ToList();
+            Console.WriteLine($"Total values in first set: {keys1.Count}. {duplicated.Count} are the same, {keys1.Count - duplicated.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");
             int i;
             for (i = 0; i < Math.Min(10, missingIn1.Count); i++)
             {
@@ -89,9 +89,8 @@ namespace JsonUtils
                 Console.WriteLine("And others...");
             }
 
-            var duplicatedIn2 = keys2.Where(x => keys1.Contains(x)).ToList();
-            var missingIn2 = keys2.Where(x => !keys1.Contains(x)).ToList();
-            Console.WriteLine($"Total values in second set: {keys1.Count}. {duplicatedIn1.Count} are the same, {keys1.Count - duplicatedIn1.Count - missingIn1.Count} are different, {missingIn1.Count} are missing.");
+            var missingIn2 = keys1.Except(keys2).ToList();
+            Console.WriteLine($"Total values in second set: {keys2.Count}. {duplicated.Count} are the same, {keys2.Count - duplicated.Count - missingIn2.Count} are different, {missingIn2.Count} are missing.");
             for (i = 0; i < Math.Min(10, missingIn2.Count); i++)
             {
                 Console.WriteLine($"Missing key value {missingIn2[i]}.");

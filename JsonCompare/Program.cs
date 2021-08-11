@@ -18,7 +18,7 @@ namespace JsonCompare
                 if (fileName.ToLower() == "_and_") { allKeys = allKeys2; continue; }
 
                 List<ResultKeys> keys = Utils.ReadResultKeys(fileName);
-                Console.WriteLine($"Checking data from file {fileName}.");
+                Console.WriteLine($"Loading file {fileName}.");
                 allKeys.AddRange(keys);
             }
 

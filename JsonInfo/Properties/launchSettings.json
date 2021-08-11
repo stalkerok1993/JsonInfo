@@ -2,7 +2,7 @@
   "profiles": {
     "JsonInfo": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\User\\Documents\\JsonFiles\\full_1.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_2.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_3.json\" \"C:\\Users\\User\\Documents\\JsonFiles\\full_4.json\""
+      "commandLineArgs": "\"C:\\Workspaces\\JsonInfo\\files\\full_1.json\" \"C:\\Workspaces\\JsonInfo\\files\\full_2.json\" \"C:\\Workspaces\\JsonInfo\\files\\full_3.json\" \"C:\\Workspaces\\JsonInfo\\files\\full_4.json\""
     }
   }
 }
